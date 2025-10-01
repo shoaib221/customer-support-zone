@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0px;
+	box-sizing: border-box;
+}
+
+
+html {
+	font-size: 18px;
+	font-family: "Inter", sans-serif;
+  	font-optical-sizing: auto;
+  	font-style: normal;
+	min-height: 100vh;
+	max-width: 2000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body {
+	height: 100%;
+}
+
+
+:root {
+	--color-1: black;
+	--color-2: white;
+	--color-3: #FEBB0C;
+	--color-3-1: rgba(254, 185, 12, 0.2);
+	--color-4: #02A53B;
+	--color-4-1: rgba(2, 165, 59, 0.2);
+	--color-5: #632EE3;
+	--color-5-1: #9F62F2;
+	--color-6 : #54CF68;
+	--color-6-1: #00827A;
+	--color-7: #b91717;
+	--color-8: #777676;
+}
+
+
+.text-col-1 {
+	color: var(--color-8) ;
+}
+
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem;
+}
+
+#nav-1 {
+	display: flex;
+	gap: .5rem;
+}
+
+#nav-2 {
+	display: none;
+}
+
+#slide {
+	display: none;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	min-height: 100%;
+	min-width: 100%;
+	z-index: 5;
+	background-color: var(--color-2);
+	padding: 1rem;
+	gap: 1rem;
+	overflow: auto;
+	flex-direction: column;
+}
+
+.ticket {
+	cursor: pointer;
+	box-shadow: 1px 4px 4px rgba(150, 150, 150, 0.4), -1px 0px 4px rgba(150, 150, 150, 0.4);
+	padding: .5rem;
+	border-radius: .5rem;
+}
+
+.ticket-1 {
+	display: flex; 
+	justify-content: space-between; 
+	color: var(--color-8);
+}
+
+#tickets {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+}
+
+.button-1 {
+	background-color: var(--color-4);
+	cursor: pointer;
+	padding: .5rem;
+	border-radius: .5rem;
+	color: var(--color-2);
+	font-weight: 600;
+	width: 100%;
+	margin: 1rem 0rem;
+}
+
+.yellow-circle {
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%; 
+	background-color: var(--color-3) ;	
+	margin-right: .5rem;
+}
+
+.progress {
+	background-color: var(--color-3-1);
+	color: var(--color-3);
+	padding: .5rem;
+	border-radius: 1rem;
+	display: flex;
+	align-items: center;
+}
+
+.green-circle {
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%; 
+	background-color: var(--color-4) ;	
+	margin-right: .5rem;
+}
+
+.open {
+	background-color: var(--color-4-1);
+	color: var(--color-4);
+	padding: .5rem;
+	border-radius: 1rem;
+	display: flex;
+	align-items: center;
+}
+
+
+.header-1 {
+	font-size: 1.3rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+
+#footer {
+	background-color: var(--color-1);
+	color: var(--color-2);
+	padding: 2rem;
+}
+
+#banner {
+	display: flex; 
+	min-height: 14rem;
+	gap: 1rem;
+	padding: 2rem;
+}
+
+#progress-banner {
+	flex-grow: 1;
+	color: var(--color-2);
+	background: url(./assets/vector5.png) no-repeat, url(./assets/vector4.PNG) right no-repeat, linear-gradient(to right, var(--color-5), var(--color-5-1) ) ;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+	flex-direction: column;
+	border-radius: .5rem;
+}
+
+
+#resolved-banner {
+	background: url(./assets/vector5.png) no-repeat, url(./assets/vector4.PNG) right no-repeat,  linear-gradient(to right, var(--color-6), var(--color-6-1) );
+	flex-grow: 1;
+	color: var(--color-2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-radius: .5rem;
+}
+
+#main {
+	display: flex; 
+	padding: 2rem; 
+	gap: 1rem;
+}
+
+
+.medium-priority {
+	color: var(--color-3);
+}
+
+.high-priority {
+	color: var(--color-7);
+}
+
+.low-priority {
+	color: var(--color-4);
+}
+
+#footer-1 {
+	
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+#footer-2 {
+	max-width: 30%;
+}
+
+.button-2 {
+	background: linear-gradient(to right, var(--color-5), var(--color-5-1));
+	padding: .5rem;
+	color: var(--color-2);
+	border-radius: .5rem;
+	font-weight: 600;
+	display: block;
+	width: 100%;
+	
+}
+
+.display-1 {
+	display: none;
+}
+
+#task {
+	min-width: 25%;
+}
+
+
+@media screen and ( max-width: 800px ) {
+
+	html {
+		font-size: 12px;
+	}
+
+	#tickets {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.ticket-1 {
+		flex-direction: column;
+	}	
+
+
+	#footer-1 {
+		flex-direction: column;
+	}
+
+	#footer-2 {
+		max-width: 100%;
+	}
+
+	#nav-1 {
+		display: none;
+	}
+
+	#nav-2 {
+		display: block;
+	}
+
+	.display-1 {
+		display: flex;
+		
+	}
+
+	#task {
+		min-width: 40%;
+	}
+
+	nav, #banner, #main, #footer {
+		padding: .5rem;
+	}
+}
+
